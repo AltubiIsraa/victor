@@ -24,10 +24,6 @@ class vector{
     return Math.sqrt(this.x * this.x + this.y * this.y);
   }
 
-  // unit(){
-  //   return Math.atan2(this.x, this.y);
-  // }
-
   unit(){
     return (this.x / this.length(), this.y / this.length())
   }
