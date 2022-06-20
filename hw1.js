@@ -1,4 +1,4 @@
-class vector{
+class Vector{
 
   constructor(x, y){
     this.x = x;
@@ -6,18 +6,18 @@ class vector{
   }
 
   add(v){
-    if (v instanceof vector) 
-    return new vector(this.x + v.x, this.y + v.y);
+    if (v instanceof Vector) 
+    return new Vector(this.x + v.x, this.y + v.y);
   }
 
   subtract(v){
-    if (v instanceof vector) 
-    return new vector(this.x - v.x, this.y - v.y);
+    if (v instanceof Vector) 
+    return new Vector(this.x - v.x, this.y - v.y);
   }
   
   multiply(v){
-    if (v instanceof vector) 
-    return new vector(this.x * v.x, this.y * v.y);
+    if (v instanceof Vector) 
+    return new Vector(this.x * v.x, this.y * v.y);
   }
 
   length() {
@@ -25,17 +25,18 @@ class vector{
   }
 
   unit(){
-    return (this.x / this.length(), this.y / this.length())
+    return new Vector (this.x / this.length(), this.y / this.length())
   }
 
   angle(){
+    
     return Math.atan2(this.x, this.y) * 180 / Math.PI;
   }
 }
 
-const a = new vector(-1, 1);
+const a = new Vector(-1, 1);
 console.log(a);
-const b = new vector(2, 2);
+const b = new Vector(2, 2);
 console.log(b);
 
 const sum = a.add(b);
